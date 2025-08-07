@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BorderCan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./script.js"></script>
+</head>
+<body>
+    <div class="p-4 max-w-2xl mx-auto">
+        <input type="file" id="upload" accept="image/*" class="mb-4" />
+        <div id="editor" class="relative border-2 border-gray-300 w-full aspect-[4/5] bg-gray-100">
+            <canvas id="canvas" class="absolute inset-0"></canvas>
+        </div>
+        <div class="mt-4 space-y-2">
+            <label>Border Style</label>
+            <select id="borderStyle" class="w-full p-2 border">
+                <option value="none">None</option>
+                <option value="white">White</option>
+                <option value="black">Black</option>
+            </select>
+
+            <label>Aspect Ratio</label>
+            <select id="aspectRatio" class="w-full p-2 border">
+                <option value="4:5">4:5</option>
+                <option value="1:1">1:1</option>
+                <option value="9:16">9:16</option>
+            </select>
+
+            <label>Border Width</label>
+            <input type="range" id="borderWidth" min="0" max="100" value="20" class="w-full" />
+
+            <label>Export Size</label>
+            <select id="exportSize" class="w-full p-2 border">
+                <option value="instagram">Instagram (1080px)</option>
+                <option value="2x">2x Size</option>
+                <option value="original">Original</option>
+            </select>
+
+        <button id="exportBtn" class="bg-blue-500 text-white p-2 w-full rounded">Download Image</button>
+        </div>
+    </div>
+
+</body>
+</html>
