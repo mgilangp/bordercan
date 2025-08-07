@@ -4,43 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BorderCan</title>
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="./script.js"></script>
+
+    <!-- Font Embed -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+   <link rel="stylesheet" href="./style.css"> 
 </head>
 <body>
+    <div class="p-4 max-w-2xl mx-auto min-h-48">
+        <h1 class="sansation-bold text-4xl">Add Borders to your Image. Ready to upload to Instagram</h1>    
+    </div>
     <div class="p-4 max-w-2xl mx-auto">
-        <input type="file" id="upload" accept="image/*" class="mb-4" />
-        <div id="editor" class="relative border-2 border-gray-300 w-full aspect-[4/5] bg-gray-100">
-            <canvas id="canvas" class="absolute inset-0"></canvas>
+        <input type="file" id="upload" accept="image/*" multiple class="mb-4" />
+        
+        <div id="previewContainer" class="grid grid-cols-1 sm:grid-cols-2 gap-4" hidden>
+        <!-- Preview Container -->
+            <div class="relative border border-gray-300 w-full max-w-md mx-auto aspect-[4/5] bg-white overflow-hidden rounded-lg" hidden>
+                <div class="absolute inset-0 flex items-center justify-center bg-gray-500" hidden>
+                    <canvas id="canvas" class="max-w-full max-h-full object-contain" hidden></canvas>
+                </div>
+            </div>
         </div>
+
         <div class="mt-4 space-y-2">
+            <br>
             <label>Border Style</label>
             <select id="borderStyle" class="w-full p-2 border">
-                <option value="none">None</option>
-                <option value="white">White</option>
-                <option value="black">Black</option>
+            <option value="white" selected>White</option>
+            <option value="black">Black</option>
+            <!-- Add more styles later -->
             </select>
 
+            <br>
             <label>Aspect Ratio</label>
             <select id="aspectRatio" class="w-full p-2 border">
-                <option value="4:5">4:5</option>
                 <option value="1:1">1:1</option>
+                <option value="4:5" selected>4:5</option>
                 <option value="9:16">9:16</option>
             </select>
 
+            <br>
             <label>Border Width</label>
-            <input type="range" id="borderWidth" min="0" max="100" value="20" class="w-full" />
-
-            <label>Export Size</label>
-            <select id="exportSize" class="w-full p-2 border">
-                <option value="instagram">Instagram (1080px)</option>
-                <option value="2x">2x Size</option>
-                <option value="original">Original</option>
+            <select id="borderWidth" class="w-full p-2 border">
+                <option value="0.025">Thin</option>
+                <option value="0.05" selected>Medium</option>
+                <option value="0.075">Thick</option>
+                <option value="0.1">Thicker</option>
             </select>
 
-        <button id="exportBtn" class="bg-blue-500 text-white p-2 w-full rounded">Download Image</button>
+            <br>
+            <label>Export Size</label>
+            <select id="exportSize" class="w-full p-2 border">
+                <option value="1080">Small (1080px)</option>
+                <option value="original" selected>Medium (2160px)</option>
+                <option value="2x">Large (4320 px)</option>
+            </select>
+   
+        <button id="downloadBtn" class="bg-blue-600 text-white px-4 py-2 mt-4 rounded w-full">
+        Download
+        </button>
+
         </div>
     </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 
+<script src="script.js"></script>
 </body>
 </html>
