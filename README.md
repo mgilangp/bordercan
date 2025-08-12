@@ -1,4 +1,5 @@
 **PROJECT OVERVIEW**
+
 I created this project to help save time when editing photos to fit Instagram Post. As we know, Instagram has changed its default feed preview to a 4:5 ratio to better support Reels content. While this change may not significantly affect portrait images, it can distort the composition and message of landscape photos, potentially undermining the photographer’s intent. Adding borders can solve this issue and preserve the original framing. InstaCanvas was built to make this process faster and more efficient, helping photographers save valuable time.
 
 **USAGE INSTRUCTIONS**
