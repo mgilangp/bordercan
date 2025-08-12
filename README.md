@@ -1,4 +1,4 @@
-<h1 style="font-family: Arial, sans-serif; font-size: 36px; font-weight: bold; color: #333;">InstaCanvas</h1>
+<h1 style="font-family: Arial, sans-serif; font-size: 36px; font-weight: bold; color: #333;">InstaBorder</h1>
 <p style="font-family: Arial, sans-serif; font-size: 18px; color: #555;">Add borders to your photos instantly</p>
 
 <h2 style="font-family: Arial, sans-serif; font-size: 28px; font-weight: bold; color: #222;">PROJECT OVERVIEW</h2>
